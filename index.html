@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess the number game</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans|Lato|Anton|Montserrat|Open+Sans+Condensed:300|Poppins|Quicksand|Pacifico|Raleway|Roboto&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="./guessTheNumber.css">
+</head>
+<body>
+<div class="popup-description">
+    <h1 class="popup-description__title">How to play</h1>
+    <p class="popup-description__text">The aim of the game is to guess a number generated randomly between 1 and 100. After each guess, you are warned if your guess is higher or lower than the generated number. You only have 10 tries, after that the game is over. You mustn't enter alphabets, special characters (e.g. "%", "#", etc.), 0 or negative numbers and numbers over 100. Good luck!</p>
+    <i class="far fa-times-circle" id="close-description-btn"></i>
+    <p class="popup-description__close">Close the window</p>
+</div>
+
+<div class="main-cont">
+    <h1 class="main-title">Simple<br><span style="font-family: 'Pacifico';">"Guess The Number"</span><br>game</h1>
+    <p class="description">Click <button class="description__btn" id="description-btn">here</button> to see the description</p>
+
+   <div class="cont">
+       <div class="game-box box">
+            <p class="game-box__text">Enter your guess:</p>
+            <div class="game-box__cont">
+                <input type="text" maxlength="3" class="game-box__input" id="game-box-input" autofocus>
+                <button type="submit" class="game-box__btn" id="game-box-btn">Guess</button>
+            </div>
+
+            <p class="game-box__error-msg"></p>
+       </div>
+
+       <hr>
+
+       <div class="guess-box box">
+            <h3 class="guess-box__title">Your guesses and results</h3>
+            <div class="guess-grid">
+                <div class="guess-item"><!-- The last guessed number dislayed using JS-->
+                </div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+                <div class="guess-item"><!-- The last guessed number dislayed using JS
+                    <i class="fas fa-times"></i><p class="guess-item__number"> --></div>
+            </div>
+
+            <div class="tries-cont">
+                <p class="tries-cont__low-or-hi"><!-- Message generated with JS after the first guess --></p>
+                <p class="tries-cont__guesses">Number of guesses: <span>0 <!--number of guesses displayed with JS--></span><br>Tries left: <span><!--number of tries left displayed with JS -->10 </span></p>
+
+                <!-- Here comes a <p></p> element generated with JS-->
+
+                <!-- Here comes a "Next game" button generated with JS--></p>
+
+                <button type="submit" class="end-of-game-btn btn" id="next-game-btn">Next game</button>
+            </div>
+       </div>
+   </div>
+</div>
+
+<script src="./guessNumber.js"></script>
+</body>
+</html>
