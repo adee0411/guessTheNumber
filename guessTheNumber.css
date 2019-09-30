@@ -1,0 +1,292 @@
+/* Defining the variables  */
+/* Defining the mixins and functions */
+/* General styles */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  background: #fff;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: white;
+  position: relative;
+}
+
+hr {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.box {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Styling the Game box */
+.popup-description {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff7c24), to(#ff6464));
+  background: linear-gradient(0deg, #ff7c24, #ff6464);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 100;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.popup-description__title {
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.popup-description__text {
+  text-align: justify;
+  line-height: 1.5;
+  color: black;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.popup-description__close {
+  text-align: center;
+  margin: 10px;
+}
+
+.popup-description i {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.popup-description i:hover {
+  color: #071949;
+}
+
+.main-cont {
+  background: -webkit-gradient(linear, left bottom, left top, from(#071949), to(#02a17f));
+  background: linear-gradient(0deg, #071949, #02a17f);
+  padding: 5px;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.description {
+  text-align: center;
+  margin: 5px;
+}
+
+.description__btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(255, 224, 51, 0.842);
+  border-radius: 3rem;
+  font-family: 'Pacifico';
+  font-size: 1.2rem;
+}
+
+.cont {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.game-box {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.game-box__text {
+  text-align: center;
+  margin: 0px;
+  font-size: 1.2rem;
+}
+
+.game-box__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.game-box__input {
+  display: block;
+  margin: 5px 10px;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #4d4d4d;
+}
+
+.game-box__btn {
+  display: block;
+  margin: 5px 10px;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fff;
+  background-color: #ff6464;
+  border-radius: 50%;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+.game-box__btn:hover {
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+}
+
+.game-box__error-msg {
+  height: 10px;
+  text-align: center;
+  font-size: .5rem;
+  color: #09ffd6;
+  font-style: italic;
+}
+
+.guess-box__title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
+}
+
+.guess-box .guess-grid {
+  display: -ms-grid;
+  display: grid;
+  margin: 10px auto;
+  width: 270px;
+  -ms-grid-columns: (50px)[5];
+      grid-template-columns: repeat(5, 50px);
+  -ms-grid-rows: (50px)[2];
+      grid-template-rows: repeat(2, 50px);
+  grid-gap: 5px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.guess-box .guess-grid .guess-item {
+  padding: 4px;
+  background-color: rgba(204, 204, 204, 0.445);
+  border-radius: 5px;
+}
+
+.guess-box .guess-grid .guess-item__number {
+  text-align: center;
+  color: #dbdbdb;
+}
+
+.guess-box .guess-grid .guess-item i {
+  display: block;
+  margin: 2px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.3rem;
+  color: #dbdbdb;
+}
+
+.guess-box .tries-cont {
+  width: 100%;
+}
+
+.guess-box .tries-cont__low-or-hi {
+  height: 22px;
+  width: 280px;
+  line-height: 22px;
+  margin: 5px auto;
+  border-radius: 3px;
+  text-align: center;
+  font-size: .7rem;
+  color: #ffe02d;
+}
+
+.guess-box .tries-cont__guesses {
+  text-align: center;
+}
+
+.guess-box .tries-cont__guesses span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ff6464;
+  border-radius: 50%;
+}
+
+.guess-box .tries-cont .end-of-game-text {
+  max-width: 260px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: .8rem;
+  text-transform: uppercase;
+  background-color: rgba(204, 204, 204, 0.445);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.guess-box .tries-cont .end-of-game-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border: 4px solid #fff;
+  background-color: #02a17f;
+  border-radius: 50%;
+  -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+  transition: -webkit-box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.guess-box .tries-cont .end-of-game-btn:hover {
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+}
+/*# sourceMappingURL=guessTheNumber.css.map */
